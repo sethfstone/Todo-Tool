@@ -1,0 +1,10 @@
+.landing-container {
+	height: 100%;
+	width: 101%;
+	position: absolute;
+	left: -1px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	display: flex;
+}

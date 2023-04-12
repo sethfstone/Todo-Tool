@@ -1,0 +1,22 @@
+<div class="todo-container-inner">
+    <div class="todo-wrapper">
+        <p class="todo-title">Tasks</p>
+        <input type="text" class="todo-entry" id="todo" placeholder="New task" (keyup.enter)="addTodoItem()" />
+    </div>
+
+   <!-- {{items}} -->
+   <div class="list">
+        <div *ngFor="let todoItem of todoItems;" class="todo-item-container">
+            <div class="todo-item-info" class="{{todoItem.todo}}">
+                {{todoItem.todo}}
+            </div>
+            <div class="checkoff">
+                <input type="checkbox" class="checkoffItemButton" name="checkoffItemButton" (click)="updateCompletionStatus(todoItem.todo)"/>
+            </div>
+        </div>
+    </div>
+</div>
+<button class="removeCompleted" id="removeCompleted" (click)="removeCompleted()" style="display:none">Click me to remove</button>
+
+
+
